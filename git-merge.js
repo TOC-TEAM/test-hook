@@ -9,9 +9,9 @@ console.log(
   )
 )
 
-const target = path.resolve(process.cwd(), '..', 'mkdir/temp')
+const target = path.resolve(process.cwd(), '..', 'make-dir/temp')
 if (fs.existsSync(target)) {
-  const subprocess = spawn('cp', ['-r', './*', target])
+  const subprocess = spawn('cp', ['-r', './*', target], { stdio: 'inherit' })
 
   subprocess.on('close', code => {
     if (code === 0) {
@@ -20,4 +20,6 @@ if (fs.existsSync(target)) {
       console.error(chalk.red('Copy failed, check what happend manually!'))
     }
   })
+} else {
+  console.warn(chalk.yellow(`Target dir: ${target} is not exist.`))
 }
