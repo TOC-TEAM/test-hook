@@ -13,9 +13,8 @@
   },
   "husky": {
     "hooks": {
-      "rebase": "node ./git-rebase.js",
-      "commit-msg": "node ./git-rebase.js",
-      "post-merge": "node ./git-rebase.js"
+      "pre-rebase": "node ./git-rebase.js",
+      "post-merge": "node ./git-merge.js"
     }
   }
 }
