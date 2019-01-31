@@ -16,5 +16,8 @@
       "pre-rebase": "node ./git-rebase.js",
       "post-merge": "node ./git-merge.js"
     }
+  },
+  "dependencies": {
+    "globby": "^9.0.0"
   }
 }
