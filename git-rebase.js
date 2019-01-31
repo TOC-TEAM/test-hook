@@ -1,1 +1,1 @@
-console.log('----has rebased----')
+console.log('----has commit-msg----')
