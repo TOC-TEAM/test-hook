@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
   "license": "ISC",
   "devDependencies": {
@@ -15,8 +12,11 @@
   "husky": {
     "hooks": {
       "pre-rebase": "node ./git-rebase.js",
-      "commit-msg": "chmod +x ./git-merge.sh"
+      "commit-msg": "npm run copy"
     }
+  },
+  "scripts": {
+    "copy": "bash ./git-merge.sh"
   },
   "dependencies": {
     "execa": "^1.0.0",
