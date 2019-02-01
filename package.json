@@ -12,7 +12,8 @@
   "husky": {
     "hooks": {
       "pre-rebase": "node ./git-rebase.js",
-      "commit-msg": "npm run copy"
+      "commit-msg": "npm run copy",
+      "pre-push": "npm run copy"
     }
   },
   "scripts": {
