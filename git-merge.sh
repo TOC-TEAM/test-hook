@@ -6,7 +6,7 @@ to="$HOME/workspace/neitui_weapp/bot"
 
 echo -e "\033[31m testing \033[0m"
 
-cp "./git-merge.sh" "./bak"
+cp "$HOME/workspace/learngit/git-merge.sh" "$HOME/workspace/learngit/bak"
 
 # if [[ ! -d $to ]]; then
 #   echo -e "\033[33m Target dir: $to is not exist. \033[0m"
